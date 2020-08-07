@@ -48,3 +48,14 @@ h1 {
     font-size: 20px;
     background-color: green;
 }
+
+#output {
+    position: absolute;
+    left: 67%;
+    right: 10%;
+    top: 40%;
+    z-index: 1;
+    color: white;
+    font-size: 20px;
+    background-color: gray;
+}

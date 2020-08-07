@@ -13,22 +13,23 @@ let el = document.getElementById("east-left");
 
 let result = document.getElementById("result"); 
 
-/*arrayX = {nr, nf, nl, wr, wf, wl, sr, sf, sl, er, ef, el}*/;
-
 const myFunc = () => {
-res = String(Number(nr.value) - Number(nf.value));
-if (nf.value !=0 || nr.value != 0) {
-	let pokusaj = document.createElement("p");
-	let tekst = document.createTextNode(res);
-	console.log(nr.value, nf.value, nl.value, wr.value, wf.value, wl.value, sr.value, sf.value, sl.value, er.value, ef.value, el.value);
-
-	result.appendChild(pokusaj);
-
-	pokusaj.appendChild(tekst);
-} else {
-	alert("input vehicle numbers")
+	//---------loading------------
+	document.getElementById("solution").innerHTML = "LOading solution";
+	res = String(Number(nr.value) - Number(nf.value));
+	//Checking if there is need for a thir phase?
+	if ((nl.value > 200) || (wl.value > 200) || (sl.value > 200) || (el.value > 200)) {
+		document.getElementById("solution").innerHTML = "Third fase NEEDED!";
+		} else {
+			document.getElementById("solution").innerHTML = "Third fase NOT needed!";
+		}
+		// ------------------------------------------------SOLUTION-------------------------------------------------------------------------
+	if (nf.value !=0 || nr.value != 0) {
+		console.log(nr.value, nf.value, nl.value, wr.value, wf.value, wl.value, sr.value, sf.value, sl.value, er.value, ef.value, el.value);
+		document.getElementById("solutionText").innerHTML = `The interval last ${res}`;
+	} else {
+		alert("input vehicle numbers")
 }
 }
 
-result.addEventListener("click", myFunc);
-
+result.addEventListener("click", myFunc,);
