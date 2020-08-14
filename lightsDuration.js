@@ -13,6 +13,14 @@ let el = document.getElementById("east-left");
 
 let result = document.getElementById("result"); 
 
+// Deleting the lane
+
+const deleteLane = (el) => {
+	let element = el;
+	element.parentNode.remove();
+};
+
+// Main function that does all the work
 const myFunc = () => {
 	//---------loading------------
 	document.getElementById("solution").innerHTML = "Loading solution";
@@ -43,4 +51,5 @@ const myFunc = () => {
 }
 }
 
-result.addEventListener("click", myFunc,);
+
+result.addEventListener("click", myFunc);
