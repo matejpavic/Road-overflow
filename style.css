@@ -59,6 +59,61 @@ h1 {
     font-size: 20px;
 }
 
+.visual {
+    position: absolute;
+    left: 30%;
+    right: 40%;
+    top: 40%;
+    z-index: 1;
+    background-color: gray;
+    border: 1px solid black;
+    height: 40%;
+}
+
+.visSouthBound {
+    position: absolute;
+    bottom: 70%;
+    height: 30%;
+    width: 100%;
+    background-color: pink;
+    z-index: 3;
+}
+
+.visEastBound {
+    position: absolute;
+    left: 70%;
+    height: 100%;
+    width:30%;
+    background-color: green;
+    z-index: 2;
+}
+
+.visNorthBound {
+    position: absolute;
+    top: 70%;
+    height: 30%;
+    width: 100%;
+    background-color: pink;
+    z-index: 3;
+}
+
+.visWestBound {
+    position: absolute;
+    right: 70%;
+    height: 100%;
+    width:30%;
+    background-color: green;
+    z-index: 2;
+}
+
+.arrows {
+    width: 70%;
+    height: 10%;
+    position: absolute;
+    top: 45%;
+    right: 5%;
+}
+
 .btnDelete {
     background-color: red;
 }
